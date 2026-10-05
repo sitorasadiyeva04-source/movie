@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+.main-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: #242424;
+    border: 2px solid #3399ff;
+    padding: 20px;
+    border-radius: 8px;
+}
+.header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.logo-text {
+    color: #ffcb05;
+    font-size: 42px;
+    font-style: italic;
+    text-shadow: 2px 2px #3b4cca;
+    margin-bottom: 15px;
+}
+.search-bar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.search-bar input, .search-bar select, .search-bar button {
+    padding: 8px 14px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-bar button {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* Сетка для красивого выстраивания карточек в ряды */
+.movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    margin-top: 25px;
+}
+
+/* Стиль отдельной карточки (фиксированная ширина, чтобы ряды были ровными) */
+.card {
+    background-color: #1a1a1a;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #3399ff;
+    padding: 15px;
+    width: calc(20% - 16px); /* Ровно по 5 штук в ряд на широком экране */
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    transform: none !important;
+    transition: none !important;
+}
+
+/* Фиксируем размер постера внутри карточки */
+.card img {
+    width: 100% !important;
+    height: 220px !important;
+    object-fit: cover !important;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Название фильма */
+.card h3 {
+    font-size: 14px;
+    color: #ffcb05;
+    margin-bottom: 8px;
+    height: 38px;
+    overflow: hidden;
+}
+
+/* Текст (рейтинг, год, жанр) */
+.card p {
+    font-size: 11px;
+    color: #b0b0b0;
+    margin-bottom: 12px;
+}
+
+/* Аккуратная кнопка */
+.more-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 11px;
+    margin-top: auto; /* Прижимает кнопку к низу карточки для ровности */
+}
+
+.more-btn:hover {
+    background-color: #45a049;
+}
